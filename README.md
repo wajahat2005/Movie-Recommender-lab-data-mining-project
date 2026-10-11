@@ -76,6 +76,6 @@ Then open the URL Streamlit prints (usually <http://localhost:8501>).
 
 | Member | Student ID | Main responsibilities | Contribution summary |
 |--------|------------|-----------------------|----------------------|
-| Member 1 |  |  |  |
+| M wajahat | 520355 | data lead |  |
 | Member 2 |  |  |  |
 | Member 3 |  |  |  |
