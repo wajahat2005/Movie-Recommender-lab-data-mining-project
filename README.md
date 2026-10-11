@@ -61,6 +61,29 @@ requirements.txt
 4. Run the remaining cells top to bottom. All randomness uses seed `42`, so
    results are reproducible.
 
+## How to use `src/data.py`
+
+After `%cd` into the repo (step 3 above), load the data in any notebook with:
+
+```python
+from src.data import load_data, load_ml32m_sample
+
+# MovieLens "latest-small" (~100k ratings) – our main dataset.
+# Downloads into data/ the first time, then reuses the local copy.
+data = load_data()
+ratings = data["ratings"]   # userId, movieId, rating, timestamp (datetime)
+movies  = data["movies"]    # movieId, title, genres (list, e.g. ["Comedy", "Romance"])
+tags    = data["tags"]      # userId, movieId, tag, timestamp (datetime)
+links   = data["links"]     # movieId, imdbId, tmdbId
+
+# Optional: a bigger dataset – 5% of the users of MovieLens 32M with ALL of
+# their ratings (~1.6M ratings). First call downloads a ~240 MB zip.
+big = load_ml32m_sample(frac=0.05)   # same keys as load_data()
+```
+
+Movies with no genres get an empty list `[]`. User sampling is fixed with
+seed `42`, so every teammate gets the same users.
+
 ## How to run the app
 
 Locally (Python 3.10+):
