@@ -52,22 +52,6 @@ The MovieLens data may not be shared again, so **it is not stored in this reposi
 
 ---
 
-## 📁 Repository structure
-
-```
-├── app/              # Streamlit web app (app.py)
-├── notebooks/        # Colab notebooks, one per member/stage
-├── reports/          # Report, figures and slides
-├── src/              # Shared Python code
-│   ├── __init__.py
-│   └── data.py       # load_data(): downloads and loads MovieLens
-├── requirements.txt
-├── CLAUDE.md         # Project rules
-└── README.md
-```
-
----
-
 ## 🚀 How to run in Google Colab
 
 Paste this into the first cell of a notebook:
